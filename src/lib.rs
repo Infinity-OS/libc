@@ -270,6 +270,9 @@ cfg_if! {
     } else if #[cfg(target_os = "redox")] {
         mod redox;
         pub use redox::*;
+    } else if #[cfg(target_os = "pulsar")] {
+        mod pulsar;
+        pub use pulsar::*;
     } else if #[cfg(unix)] {
         mod unix;
         pub use unix::*;
